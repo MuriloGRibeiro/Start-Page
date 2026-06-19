@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Landing Page</title>
+    <style>
+      /* Reseta as margens padrão do navegador */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      /* Contêiner principal com a imagem de fundo */
+      .landing-background {
+        /* Coloque o caminho da sua imagem de fundo aqui */
+        background-image: url("image/city_background.png");
+        background-size: cover; /* Faz a imagem cobrir toda a tela */
+        background-position: center; /* Centraliza a imagem de fundo */
+        background-repeat: no-repeat;
+
+        /* Ocupa 100% da altura da tela */
+        height: 100vh;
+        width: 100%;
+
+        /* Flexbox para centralizar o conteúdo no meio da tela */
+        display: flex;
+        justify-content: center; /* Centraliza horizontalmente */
+        align-items: center; /* Centraliza verticalmente */
+      }
+
+      /* Div que segura a imagem e o botão */
+      .conteudo-central {
+        display: flex;
+        flex-direction: column; /* Coloca um item embaixo do outro */
+        align-items: center; /* Centraliza os itens dentro da div */
+        gap: 10px; /* Espaço entre a imagem central e o botão de play */
+        height: 45vh;
+        width: 45%;
+      }
+
+      /* Estilo opcional para a imagem central não quebrar em telas pequenas */
+      .imagem-destaque {
+        max-width: 100%;
+        height: auto;
+      }
+
+      /* Remove estilos padrão de botão caso queira usar a tag <button> */
+      .botao-play {
+        background: none;
+        border: none;
+        cursor: pointer;
+        transition: transform 0.2s ease; /* Efeito suave ao passar o mouse */
+      }
+
+      /* Efeito de zoom ao passar o mouse no botão */
+      .botao-play:hover {
+        transform: scale(1.1);
+      }
+    </style>
+  </head>
+  <body>
+    <main class="landing-background">
+      <div class="conteudo-central">
+        <img
+          src="image/start_pixel.png"
+          alt="Imagem Principal"
+          class="imagem-destaque"
+        />
+
+        <button class="botao-play">
+          <img src="" alt="Botão Play" />
+        </button>
+      </div>
+    </main>
+  </body>
+</html>
