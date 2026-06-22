@@ -1,88 +1,297 @@
 /* Reseta as margens padrão do navegador */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   NAVBAR - ESTILO LEAGUE OF LEGENDS
+========================================= */
+.lol-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #111111; /* Fundo bem escuro, quase preto */
+  border-bottom: 2px solid #222; /* Linha sutil embaixo */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  z-index: 1000;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Container do lado esquerdo (Logos + Menu) */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 40px; /* Distância entre a logo e o menu */
+}
+
+/* Área das Logos */
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.logo-main {
+  color: #ffffff;
+  font-weight: 900;
+  font-size: 20px;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.logo-divider {
+  width: 2px;
+  height: 30px;
+  background-color: #333; /* Barrinha separadora igual da Riot */
+}
+
+.logo-sub {
+  color: #4caf50; /* Verde combinando com o botão de play */
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+/* Menu de Navegação */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 25px;
+  margin-top: 4px;
+}
+
+.nav-menu li a {
+  color: #f9f9f9;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: color 0.2s ease;
+}
+
+.nav-menu li a:hover {
+  color: #0bc6e3; /* Fica azul ao passar o mouse */
+}
+
+.arrow {
+  font-size: 10px;
+  margin-left: 5px;
+}
+
+/* Container do lado direito (Ícones + Botão) */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.nav-icons {
+  display: flex;
+  gap: 15px;
+}
+
+.nav-icons .icon {
+  color: #f9f9f9;
+  text-decoration: none;
+  font-size: 18px;
+  opacity: 0.8;
+  transition: opacity 0.2s;
+  background-color: #222; /* Círculo escuro atrás do ícone */
+  padding: 8px;
+  border-radius: 50%;
+}
+
+.nav-icons .icon:hover {
+  opacity: 1;
+  background-color: #333;
+}
+
+/* Botão Principal Estilo "JOGUE AGORA" */
+.btn-action {
+  background-color: #0bc6e3; /* Azul Ciano característico do LoL */
+  color: #000000;
+  text-decoration: none;
+  padding: 12px 24px;
+  border-radius: 8px; /* Bordas levemente arredondadas */
+  font-size: 14px;
+  font-weight: 800;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition:
+    background-color 0.2s ease,
+    transform 0.1s ease;
+}
+
+.btn-action:hover {
+  background-color: #0de2ff; /* Fica mais brilhante ao passar o mouse */
+  transform: scale(1.05); /* Dá um leve zoom igual botão de jogo */
+}
+
+/* Estilo da Logo */
+.nav-logo a {
+  color: #4caf50; /* Verde combinando com o botão de play */
+  font-size: 24px;
+  font-weight: bold;
+  text-decoration: none;
+  letter-spacing: 2px;
+}
+
+/* Container dos Links Centrais */
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+}
+
+/* Links normais */
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #4caf50;
+}
+
+/* Container dos botões da direita */
+.nav-actions {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+/* Botão Cadastre-se (Transparente com borda) */
+.btn-cadastrar {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border: 2px solid #ffffff;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: all 0.3s;
+}
+
+.btn-cadastrar:hover {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Botão Área do Cliente (Destaque visual) */
+.btn-login {
+  background-color: #4caf50;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.btn-login:hover {
+  background-color: #45a049;
 }
 
 /* Contêiner principal com a imagem de fundo */
 .landing-background {
-    background-image: url('../img/city_background.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    
-    /* Ocupa 100% da altura da tela */
-    height: 100vh; 
-    width: 100%;
-    
-    /* Flexbox para centralizar o conteúdo no meio da tela */
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background-image: url("../img/city_background.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* Ocupa 100% da altura da tela */
+  height: 100vh;
+  width: 100%;
+
+  /* Flexbox para centralizar o conteúdo no meio da tela */
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* Div que segura a imagem e o botão */
 .conteudo-central {
-    display: flex;
-    flex-direction: column; /* Coloca um item embaixo do outro */
-    align-items: center;    /* Centraliza os itens horizontalmente */
-    gap: 30px;              /* Espaço entre a imagem central e o botão de play */
+  display: flex;
+  flex-direction: column; /* Coloca um item embaixo do outro */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  gap: 30px; /* Espaço entre a imagem central e o botão de play */
 }
 
 /* Garante que a imagem central seja responsiva */
 .imagem-destaque {
-    max-width: 50%;
-    height: auto;
+  max-width: 50%;
+  height: auto;
 }
 
 /* Remove estilos padrão do botão */
 .botao-play {
-    background: none;
-    border: none;
-    cursor: pointer;
-    transition: transform 0.2s ease; /* Efeito suave de transição */
- 
-    /*Brilho base (usando a cor verde neon do centro) */
-    box-shadow: 0 0 10px #70e642, 0 0 5px #70e642 inset;
-    border-radius: 4px; /* Leve arredondado para o brilho */
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease; /* Efeito suave de transição */
 
-    /* Inicia a animação contínua */
-    animation: pulsoNeon 2s infinite ease-in-out;
+  /*Brilho base (usando a cor verde neon do centro) */
+  box-shadow:
+    0 0 10px #70e642,
+    0 0 5px #70e642 inset;
+  border-radius: 4px; /* Leve arredondado para o brilho */
+
+  /* Inicia a animação contínua */
+  animation: pulsoNeon 2s infinite ease-in-out;
 }
 
 /* Efeito de zoom ao passar o mouse no botão */
 .botao-play:hover {
-    transform: scale(1.1);
-    animation: pulsoNeonHover 1s infinite ease-in-out;
+  transform: scale(1.1);
+  animation: pulsoNeonHover 1s infinite ease-in-out;
 }
 /* Controla o tamanho da imagem do botão de play */
 .botao-play img {
-    width: 150px; /* Ajuste esse valor (ex: 120px, 180px) até achar o tamanho ideal */
-    height: auto;
-    display: block; 
-    image-rendering: pixelated; /* Mantém o pixel art totalmente nítido e sem borrão ao reduzir */
+  width: 150px; /* Ajuste esse valor (ex: 120px, 180px) até achar o tamanho ideal */
+  height: auto;
+  display: block;
+  image-rendering: pixelated; /* Mantém o pixel art totalmente nítido e sem borrão ao reduzir */
 }
-
 
 /* Define a animação do pulso */
 @keyframes pulsoNeon {
-    0% {
-        box-shadow: 0 0 10px 2px #70e642, 0 0 5px 1px #70e642 inset;
-        opacity: 0.8;
-    }
-    50% {
-        box-shadow: 0 0 20px 6px #70e642, 0 0 10px 3px #70e642 inset;
-        opacity: 1;
-    }
-    100% {
-        box-shadow: 0 0 10px 2px #70e642, 0 0 5px 1px #70e642 inset;
-        opacity: 0.8;
-    }
+  0% {
+    box-shadow:
+      0 0 10px 2px #70e642,
+      0 0 5px 1px #70e642 inset;
+    opacity: 0.8;
+  }
+  50% {
+    box-shadow:
+      0 0 20px 6px #70e642,
+      0 0 10px 3px #70e642 inset;
+    opacity: 1;
+  }
+  100% {
+    box-shadow:
+      0 0 10px 2px #70e642,
+      0 0 5px 1px #70e642 inset;
+    opacity: 0.8;
+  }
 }
 
 /* Opcional: Versão mais rápida e intensa para o Hover */
 @keyframes pulsoNeonHover {
-    0%, 100% { box-shadow: 0 0 15px 4px #70e642; }
-    50% { box-shadow: 0 0 30px 10px #70e642; }
+  0%,
+  100% {
+    box-shadow: 0 0 15px 4px #70e642;
+  }
+  50% {
+    box-shadow: 0 0 30px 10px #70e642;
+  }
 }

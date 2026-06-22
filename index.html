@@ -4,10 +4,43 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Landing Page</title>
-    <link rel="stylesheet" href="assets/css/style.css">
-    
+    <link rel="stylesheet" href="assets/css/style.css" />
   </head>
+
   <body>
+    <!-- Navbar Estilo League of Legends -->
+    <nav class="lol-navbar">
+      <div class="nav-left">
+        <!-- Adaptando o estilo de "duas logos" da Riot -->
+        <div class="logo-container">
+          <a href="#" class="logo-sub">START</a>
+          <span class="logo-divider"></span>
+        </div>
+
+        <!-- Links de navegação centrais -->
+        <ul class="nav-menu">
+          <li><a href="#detalhes">DETALHES DO PRODUTO</a></li>
+          <li><a href="#licencas">PLANOS E LICENÇAS</a></li>
+          <li><a href="#contato">CONTATO</a></li>
+          <li class="dropdown">
+            <a href="#mais">MAIS <span class="arrow">▼</span></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="nav-right">
+        <!-- Ícones simulando a busca e o idioma -->
+        <div class="nav-icons">
+          <!-- Usando emojis/símbolos simples, mas você pode trocar por SVGs depois -->
+          <a href="#" class="icon">🔍</a>
+          <a href="#" class="icon">🌐</a>
+        </div>
+
+        <!-- Botão de destaque estilo "JOGUE AGORA" -->
+        <a href="#acesso" class="btn-action">ÁREA DO CLIENTE</a>
+      </div>
+    </nav>
+
     <main class="landing-background">
       <div class="conteudo-central">
         <img
@@ -23,6 +56,5 @@
     </main>
 
     <script src="assets/js/script.js"></script>
-
   </body>
 </html>
