@@ -1,0 +1,88 @@
+/* Reseta as margens padrão do navegador */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Contêiner principal com a imagem de fundo */
+.landing-background {
+    background-image: url('../img/city_background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    /* Ocupa 100% da altura da tela */
+    height: 100vh; 
+    width: 100%;
+    
+    /* Flexbox para centralizar o conteúdo no meio da tela */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Div que segura a imagem e o botão */
+.conteudo-central {
+    display: flex;
+    flex-direction: column; /* Coloca um item embaixo do outro */
+    align-items: center;    /* Centraliza os itens horizontalmente */
+    gap: 30px;              /* Espaço entre a imagem central e o botão de play */
+}
+
+/* Garante que a imagem central seja responsiva */
+.imagem-destaque {
+    max-width: 50%;
+    height: auto;
+}
+
+/* Remove estilos padrão do botão */
+.botao-play {
+    background: none;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.2s ease; /* Efeito suave de transição */
+ 
+    /*Brilho base (usando a cor verde neon do centro) */
+    box-shadow: 0 0 10px #70e642, 0 0 5px #70e642 inset;
+    border-radius: 4px; /* Leve arredondado para o brilho */
+
+    /* Inicia a animação contínua */
+    animation: pulsoNeon 2s infinite ease-in-out;
+}
+
+/* Efeito de zoom ao passar o mouse no botão */
+.botao-play:hover {
+    transform: scale(1.1);
+    animation: pulsoNeonHover 1s infinite ease-in-out;
+}
+/* Controla o tamanho da imagem do botão de play */
+.botao-play img {
+    width: 150px; /* Ajuste esse valor (ex: 120px, 180px) até achar o tamanho ideal */
+    height: auto;
+    display: block; 
+    image-rendering: pixelated; /* Mantém o pixel art totalmente nítido e sem borrão ao reduzir */
+}
+
+
+/* Define a animação do pulso */
+@keyframes pulsoNeon {
+    0% {
+        box-shadow: 0 0 10px 2px #70e642, 0 0 5px 1px #70e642 inset;
+        opacity: 0.8;
+    }
+    50% {
+        box-shadow: 0 0 20px 6px #70e642, 0 0 10px 3px #70e642 inset;
+        opacity: 1;
+    }
+    100% {
+        box-shadow: 0 0 10px 2px #70e642, 0 0 5px 1px #70e642 inset;
+        opacity: 0.8;
+    }
+}
+
+/* Opcional: Versão mais rápida e intensa para o Hover */
+@keyframes pulsoNeonHover {
+    0%, 100% { box-shadow: 0 0 15px 4px #70e642; }
+    50% { box-shadow: 0 0 30px 10px #70e642; }
+}
